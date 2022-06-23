@@ -3,6 +3,7 @@ import "./App.scss";
 //connect component to App.js
 import Form from "./Components/Form/Form";
 import Hello from "./Components/Hello/Hello";
+import Props from "./Components/Props/Parent";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Hello />
       <Form />
+      <Props />
     </div>
   );
 }

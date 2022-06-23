@@ -18,16 +18,21 @@ function Form() {
       setIsValid(false);
     } else {
       console.log(firstName);
+      setIsValid(true);
     }
   };
+
+  const firstNameClass = isValid ? "null" : "error";
 
   return (
     <form>
       <input
+        className={`.col ${firstNameClass}`}
         name="firstName"
         placeholder="First Name"
-        style={{ borderColor: isValid ? "null" : "red" }}
+        // style={{ borderColor: isValid ? "black" : "red" }}
         type="text"
+        value={firstName}
         onChange={handleOnChange}
       />
       {isValid ? null : <p>First name cannot be empty!</p>}
